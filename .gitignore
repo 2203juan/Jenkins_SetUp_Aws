@@ -1,0 +1,7 @@
+/.idea/
+/networking/.terraform/
+/networking/.terraform.lock.hcl
+/instances/.terraform
+/instances/.terraform.lock.hcl
+/instances/terraform.tfstate
+/instances/terraform.tfstate.backup
