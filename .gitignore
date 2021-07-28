@@ -5,4 +5,4 @@
 /instances/.terraform.lock.hcl
 /instances/terraform.tfstate
 /instances/terraform.tfstate.backup
-/ansible/playbooks/myEc2KeyPair.pem
+/ansible/playbooks/juan.hoyosu.pem
