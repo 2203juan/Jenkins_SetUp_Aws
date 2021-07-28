@@ -1,0 +1,6 @@
+-
+  name: Test Connectivity to target server
+  hosts: ec2_server
+  tasks:
+    - name: Ping Test
+      ping:

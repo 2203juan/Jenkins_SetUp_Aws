@@ -1,0 +1,8 @@
+-
+  name: Copy files into target server
+  hosts: ec2_server
+  tasks:
+    - name: Copy file
+      copy:
+        src: /home/juanhoyosu/Desktop/main.py
+        dest: /tmp/main.py

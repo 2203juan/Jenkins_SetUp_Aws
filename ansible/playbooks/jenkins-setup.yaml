@@ -1,0 +1,6 @@
+-
+  name: SetUp Jenkins On Aws
+  hosts: ec2_server
+  become: true
+  roles:
+    - role: jenkins

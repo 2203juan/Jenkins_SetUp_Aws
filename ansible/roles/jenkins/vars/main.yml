@@ -1,0 +1,11 @@
+---
+# vars file for jenkins
+jenkins_key_ubuntu: "https://pkg.jenkins.io/debian-stable/jenkins.io.key"
+
+javaUbuntu: "openjdk-8-jre-headless"
+
+software:
+  java:
+    name: "{{ javaUbuntu }}"
+  jenkins:
+    name: "jenkins"
