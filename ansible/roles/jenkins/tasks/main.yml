@@ -26,10 +26,16 @@
   command: "cat /var/lib/jenkins/secrets/initialAdminPassword"
   register: result
 
-- name: "Install Git Plugin"
-  jenkins_plugin:
-    name: "git"
-
 - name: "Showing init password jenkins"
   debug:
     var: result.stdout
+
+- name: "Install Git Plugin"
+  jenkins_plugin:
+    name: "{{ item }}"
+    state: present
+    with_dependencies: yes
+  
+  with_items:
+    - git
+    - docker

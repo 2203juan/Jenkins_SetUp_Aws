@@ -14,7 +14,7 @@ variable "remote_state_key" {
 
 variable "key_pair_name" {
   description = "Key Pair Name"
-  default = "myEc2KeyPair"
+  default = "juan.hoyosu"
 }
 variable "ec2_instance_type" {
   description = "EC2-Instance type to launch"
