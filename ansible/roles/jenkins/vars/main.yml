@@ -4,8 +4,22 @@ jenkins_key_ubuntu: "https://pkg.jenkins.io/debian-stable/jenkins.io.key"
 
 javaUbuntu: "openjdk-8-jre-headless"
 
+
+reposUbuntu:
+  jenkins:
+    name: "Jenkins"
+    url: "deb https://pkg.jenkins.io/debian binary/"
+
 software:
   java:
     name: "{{ javaUbuntu }}"
   jenkins:
     name: "jenkins"
+
+jenkins_hostname: 35.183.124.239
+jenkins_jar_location: /opt/jenkins-cli.jar
+
+jenkins_directory: /var/lib/jenkins
+jenkins_custom_plugins:
+  - git
+  - docker

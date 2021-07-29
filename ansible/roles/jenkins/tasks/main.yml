@@ -30,12 +30,14 @@
   debug:
     var: result.stdout
 
-- name: "Install Git Plugin"
-  jenkins_plugin:
-    name: "{{ item }}"
-    state: present
-    with_dependencies: yes
-  
-  with_items:
-    - git
-    - docker
+# - name: Get the jenkins-cli jarfile from the Jenkins server
+#   get_url:
+#     url: "http://{{ jenkins_hostname }}:8080/jnlpJars/jenkins-cli.jar"
+#     dest: "{{ jenkins_jar_location }}"
+#   register: jarfile_get
+#   until: "'OK' in jarfile_get.msg or 'file already exists' in jarfile_get.msg"
+#   retries: 5
+#   delay: 10
+
+#- name: "Install PLugins"
+#  include: plugins.yml
