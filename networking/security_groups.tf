@@ -4,16 +4,16 @@ resource "aws_security_group" "security_group" {
   vpc_id = module.vpc.vpc_id
 
   ingress {
-    from_port = 22
+    from_port = var.ssh_port
     protocol = "TCP"
-    to_port = 22
+    to_port = var.ssh_port
     cidr_blocks = [var.ssh_allowed_host]
   }
 
   ingress {
-    from_port = 8080
+    from_port = var.jenkins_port
     protocol = "TCP"
-    to_port = 8080
+    to_port = var.jenkins_port
     cidr_blocks = ["0.0.0.0/0"]
   }
 

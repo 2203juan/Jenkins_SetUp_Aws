@@ -22,3 +22,34 @@ variable "public_subnet_1" {
 variable "ssh_allowed_host" {
   description = "SSH ALLOWED HOST"
 }
+
+variable "ssh_port" {
+  description = "SSH PORT"
+  default = 22 
+}
+
+variable "jenkins_port" {
+  description = "Jenkins Port"
+  default = 8080
+}
+
+variable "enable_nat_gateway" {
+  description = "enable_nat_gateway"
+  default = false
+}
+
+variable "single_nat_gateway" {
+  description = "single_nat_gateway"
+  default = false
+  
+}
+
+variable "enable_dns_hostnames" {
+  description = "enable_dns_hostnames"
+  default = true
+}
+
+variable "enable_dns_support" {
+  description = "enable_dns_support"
+  default = true
+}
